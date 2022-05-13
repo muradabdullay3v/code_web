@@ -11,17 +11,31 @@ body{
 
 .my_container{
 	margin: 0 auto;
-	position: relative;
 	width: 90%;
 	#myCarousel{
 		width: 100%;
 	}
 }
 
+@media screen and (max-width:900px) {
+	.my_container{
+		width: 100%;
+		margin: 0;
+	}
+}
 
-.topnav {
+.my_nav_row{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+.topnav  , .scrollbar{
 	background-color: $background-color_1;
+	min-height: 60px;
 	position: fixed;
+	width: 100%;
 	z-index: 100;
 	a {
 		float: left;
@@ -35,10 +49,51 @@ body{
 		font-size: 14px;
 		font-weight: bolder;
 	}
+	@media screen and (max-width:900px) {
+		a{
+			font-size: 18px;
+		}
+	}
+	@media screen and (max-width:600px) {
+		a{
+			font-size: 22px;
+		}
+	}
+	.nav_icon{
+		float: right;
+		display: none;
+	}
 	.icon {
 		display: none;
 	}
+	.logo{
+		a{
+			content: url(https://code.edu.az/wp-content/uploads/2021/09/logo-white.svg);
+			width: 180px;
+			margin: 0;
+		}
+		@media screen and (max-width:900px) {
+			a{
+				content: url(https://code.edu.az/wp-content/uploads/2021/07/logo-footer.png);
+				width: 180px;
+			}
+		}
+		@media screen and (max-width:600px) {
+			a{
+				content: url(https://code.edu.az/wp-content/uploads/2021/07/logo-footer.png);
+				width: 240px;
+			}
+		}
+		@media screen and (max-width:450px) {
+			a{
+				content: url(https://code.edu.az/wp-content/uploads/2021/07/logo-footer.png);
+				width: 160px;
+			}
+		}
+	}
 }
+
+
 
 .drpdown {
 	float: left;
@@ -54,6 +109,16 @@ body{
 		font-family: inherit;
 		margin: 0;
 		margin-top: 5px;
+	}
+	@media screen and (max-width:900px) {
+		.drpbtn{
+			font-size: 18px;
+		}
+	}
+	@media screen and (max-width:600px) {
+		.drpbtn{
+			font-size:22px;
+		}
 	}
 	.drpbtn:not(:first-child){
 		margin-left: 10px;
@@ -78,16 +143,20 @@ body{
 		text-decoration: none;
 		display: block;
 		text-align: left;
+		margin: 0;
 		&:hover {
 			background-color: #ddd;
 			color: black;
 		}
 	}
 }
-@media screen and (max-width: 600px) {
-	.topnav {
-		background-color: red;
-		height: auto;
+@media screen and (max-width: 900px) {
+	.topnav  , .scrollbar {
+		background-color: #fff;
+		position: fixed;
+		.nav_icon{
+			display: block;
+		}
 		a {
 			&:not(:first-child) {
 				display: none;
@@ -99,20 +168,22 @@ body{
 			color: #000;
 			position: absolute;
 			right: 12px;
-			top: 0;
+			top: 16px;
 		}
 	}
+	
 	.drpdown {
 		.drpbtn {
 			display: none;
 		}
 	}
-	.topnav.responsive {
+	.topnav.responsive   , .scrollbar.responsive{
 		position: fixed;
+		width: 100%;
 		.icon {
 			position: absolute;
 			right: 12px;
-			top: 0;
+			top: 21px;
 		}
 		a {
 			float: none;
@@ -136,9 +207,64 @@ body{
 	}
 }
 
+@media screen and (max-width: 900px){
+	.topnav.responsive  , .scrollbar.responsive {
+		.icon {
+			top: 10px;
+		}
+		.nav_icon_wp {
+			margin-right: 135.3px;
+		}
+		.nav_icon_phone {
+			margin-right: 78.3px;
+		}
+	}
+	.topnav   , .scrollbar{
+		a.icon {
+			top: 5px;
+		}
+		.nav_icon_wp {
+			margin-right: 135.3px;
+		}
+		.nav_icon_phone {
+			margin-right: 78.3px;
+		}
+	}
+}	
+
+@media screen and (max-width: 450px){
+	.topnav.responsive  , .scrollbar.responsive {
+		.icon {
+			top: 10px;
+		}
+		.nav_icon_wp {
+			margin-right: 135.3px;
+			top: 2px;
+		}
+		.nav_icon_phone {
+			margin-right: 78.3px;
+			top: 2px;
+		}
+	}
+	.topnav   , .scrollbar{
+		a.icon {
+			top: 5px;
+		}
+		.nav_icon_wp {
+			margin-right: 135.3px;
+			margin-top: -3px;
+		}
+		.nav_icon_phone {
+			margin-right: 78.3px;
+			margin-top: -3px;
+		}
+	}
+}	
+
 .links{
 	margin: 0 auto;
-	width: 500px;
+	padding-left: 10px;
+	width: 650px;
 	height: 50px;
 }
 
@@ -159,23 +285,25 @@ body{
 	}
 	
 	.social_icons{
-		position: relative;
-		top: 0;
-		width: 300px;
+		width: 400px;
 		display: inline-block;
 		margin: 0 auto;
-		font-size: 18px;
+		font-size: 16px;
+		&-item{
+			position: relative;
+			display: inline-block;
+			a{
+				color: #000;
+			}
+		}
+		&-item:hover{
+			animation: levitation 2s infinite;
+		} 
+		&-item:not(:first-child){
+			margin-left: 30px;
+		}
 	}
 
-	.social_icons i:hover{
-		animation: levitation 1.5s infinite;
-	}
-
-
-	.social_icons i:not(:first-child){
-		margin-left: 30px;
-	}
-	
 	.search_icon{
 	width: 30px;
 	display: inline-block;
@@ -194,13 +322,8 @@ body{
 	}
 }
 
-.logo {
-	img{
-		width: 150px;
-	}
-}
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:900px) {
 	.links{
 		margin: 0 auto;
 		width: auto;
@@ -218,10 +341,103 @@ body{
 	}
 }
 
-@keyframes levitation {
-	0%{top: 0;}
-	25%{top: 10px;}
-	50%{top: 20px;}
-	75%{top: 10px;}
-	100%{top:0;}
+@media screen and (max-width:1600px) {
+	.social_icons{
+		padding: 0;
+	}
 }
+
+@keyframes levitation {
+	0%{top: 5px;}
+	25%{top: 8px;}
+	50%{top: 5px;}
+	75%{top: 8px;}
+	100%{top:5px;}
+}
+
+.fa-bars{
+	font-size: 22px;
+}
+
+.nav_icon_phone:hover{
+	animation: levitation 2s infinite;
+}
+
+.nav_icon_wp:hover{
+	animation: levitation 2s infinite;
+}
+
+
+.scrollbar{
+	display: none;
+}
+
+@media screen and (min-width:900px) {
+	.topnav.scrolled {
+		display: none;
+	}
+	.scrollbar.scrolled{
+		display: block;
+		background-color: #fff !important;
+		a{
+			color: $color_3;
+		}
+		.drpdown{
+			button{
+				color: $color_3;
+			}
+		}
+		.logo{
+			a{
+				content: url(https://code.edu.az/wp-content/uploads/2021/07/logo-footer.png);
+				margin-left: 100px;
+				width: 140px;
+			}
+		}
+	}
+	.scrollbar{
+		border-bottom:1px solid #000;
+		.links{
+			margin: 0 auto;
+			width: 450px;
+		}
+	}
+	.search_icon-item{
+		display: inline-block;
+		position: absolute;
+		top: 20px;
+		right: 230px;
+	}
+	.muraciet_et_btn{
+		width: 200px;
+		height: 61px;
+		background-color: #F9DD00;
+		display: inline-block;
+		border: none;
+		font-weight: 700;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
+.scrollbar{
+	display: none;
+}
+  
+.topnav , .scrollbar{
+	.drpbtn{
+		&:hover{
+			border-bottom: 4px solid #F9DD00;
+	}
+}
+	.links{
+		a{
+			&:hover{
+				border-bottom: 4px solid #F9DD00;
+			}
+		}
+		
+	}
+ }
+

@@ -5,6 +5,12 @@ $(document).ready(function(){
           $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
         });
       });
+      $(function () {
+        $(document).scroll(function () {
+          var $nav = $(".scrollbar");
+          $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+      });
   });
   function myFunction() {
     var x = document.getElementById("myTopnav");
@@ -14,4 +20,5 @@ $(document).ready(function(){
       x.className = "topnav";
     }
   }
+
   
