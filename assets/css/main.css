@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Visby CF Medium" , sans-serif;
+}
+
+.my_container {
+  margin: 0 auto;
+  position: relative;
+  width: 90%;
+}
+
+.my_container #myCarousel {
+  width: 100%;
+}
+
+.topnav {
+  background-color: rgba(0, 0, 0, 0);
+  position: fixed;
+  z-index: 100;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 10px;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.drpdown {
+  float: left;
+  overflow: hidden;
+}
+
+.drpdown .drpbtn {
+  font-size: 14px;
+  font-weight: bolder;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.drpdown .drpbtn:not(:first-child) {
+  margin-left: 10px;
+}
+
+.drpdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav {
+    background-color: red;
+    height: auto;
+  }
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+    color: #000;
+    position: absolute;
+    right: 12px;
+    top: 0;
+  }
+  .drpdown .drpbtn {
+    display: none;
+  }
+  .topnav.responsive {
+    position: fixed;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 12px;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    color: #000;
+    margin: 0;
+  }
+  .topnav.responsive .drpdown {
+    float: none;
+  }
+  .topnav.responsive .drpdown .drpbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    color: #000;
+  }
+  .topnav.responsive .dropdown-content {
+    position: relative;
+  }
+}
+
+.links {
+  margin: 0 auto;
+  width: 500px;
+  height: 50px;
+}
+
+.my-row-style {
+  width: 100%;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.my-row-style .top_text {
+  display: inline-block;
+  width: 600px;
+  padding-top: 15px;
+}
+
+.my-row-style .top_text p {
+  margin-top: 0px;
+  font-size: 13px;
+  color: #666666;
+}
+
+.my-row-style .social_icons {
+  position: relative;
+  top: 0;
+  width: 300px;
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.my-row-style .social_icons i:hover {
+  -webkit-animation: levitation 1.5s infinite;
+          animation: levitation 1.5s infinite;
+}
+
+.my-row-style .social_icons i:not(:first-child) {
+  margin-left: 30px;
+}
+
+.my-row-style .search_icon {
+  width: 30px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+.my-row-style .muraciet_et {
+  width: 200px;
+  height: 51px;
+  background-color: #F9DD00;
+  display: inline-block;
+  border: none;
+  font-weight: 700;
+}
+
+.logo img {
+  width: 150px;
+}
+
+@media screen and (max-width: 600px) {
+  .links {
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+  }
+}
+
+.myCarousel {
+  z-index: 0;
+}
+
+@media screen and (max-width: 1400px) {
+  .my-row-style {
+    display: none;
+  }
+}
+
+@-webkit-keyframes levitation {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: 10px;
+  }
+  50% {
+    top: 20px;
+  }
+  75% {
+    top: 10px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes levitation {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: 10px;
+  }
+  50% {
+    top: 20px;
+  }
+  75% {
+    top: 10px;
+  }
+  100% {
+    top: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */
