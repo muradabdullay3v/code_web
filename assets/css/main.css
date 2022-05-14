@@ -466,4 +466,74 @@ body {
 .topnav .links a:hover, .scrollbar .links a:hover {
   border-bottom: 4px solid #F9DD00;
 }
+
+.dropdown-content {
+  max-height: 0;
+}
+
+.drpdown:hover .dropdown-content {
+  -webkit-animation: drop 0.5s forwards;
+          animation: drop 0.5s forwards;
+}
+
+.drpdown:hover .dropdown-content a {
+  -webkit-animation: drop_text 1.5s forwards;
+          animation: drop_text 1.5s forwards;
+}
+
+@-webkit-keyframes drop {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 300px;
+  }
+}
+
+@keyframes drop {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 300px;
+  }
+}
+
+@-webkit-keyframes drop_text {
+  from {
+    color: rgba(0, 0, 0, 0);
+  }
+  to {
+    color: black;
+  }
+}
+
+@keyframes drop_text {
+  from {
+    color: rgba(0, 0, 0, 0);
+  }
+  to {
+    color: black;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .topnav.responsive {
+    max-height: 0;
+    -webkit-animation: drop 0.5s forwards;
+            animation: drop 0.5s forwards;
+  }
+  .topnav.responsive .navmenu, .topnav.responsive button {
+    -webkit-animation: drop_text 1.5s forwards;
+            animation: drop_text 1.5s forwards;
+  }
+  .drpdown:hover .dropdown-content {
+    -webkit-animation: drop 0.5s forwards;
+            animation: drop 0.5s forwards;
+  }
+  .drpdown:hover .dropdown-content a {
+    -webkit-animation: drop_text 1.5s forwards;
+            animation: drop_text 1.5s forwards;
+  }
+}
 /*# sourceMappingURL=main.css.map */

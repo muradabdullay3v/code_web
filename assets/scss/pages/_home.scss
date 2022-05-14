@@ -441,3 +441,41 @@ body{
 	}
  }
 
+.dropdown-content{
+	max-height: 0;
+}
+
+.drpdown:hover .dropdown-content{
+	animation: drop 0.5s forwards;
+	a{
+	animation: drop_text 1.5s forwards;
+	}
+}
+
+@keyframes drop {
+	from{max-height: 0;}
+	to{max-height: 300px;}
+}
+
+@keyframes drop_text {
+	from{color:$background-color_1;}
+	to{color: $color_3;}
+}
+
+@media screen and (max-width:900px) {
+	.topnav.responsive{
+		max-height: 0;
+		animation: drop 0.5s forwards;
+		.navmenu , button{
+		animation: drop_text 1.5s forwards;
+			
+		}
+	}
+	
+	.drpdown:hover .dropdown-content{
+		animation: drop 0.5s forwards;
+		a{
+		animation: drop_text 1.5s forwards;
+		}
+	}
+}
