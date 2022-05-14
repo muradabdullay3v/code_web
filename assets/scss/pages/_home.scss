@@ -454,7 +454,7 @@ body{
 
 @keyframes drop {
 	from{max-height: 0;}
-	to{max-height: 300px;}
+	to{max-height: 700px;}
 }
 
 @keyframes drop_text {
@@ -476,6 +476,52 @@ body{
 		animation: drop 0.5s forwards;
 		a{
 		animation: drop_text 1.5s forwards;
+		}
+	}
+}
+
+#stats{
+	background:linear-gradient(
+		rgba(3, 3, 3, 0.60), 
+		rgba(3, 3, 3, 0.60)
+	  ), url('https://2022.code.edu.az/wp-content/uploads/2021/09/code-academy-bg.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+.stats{
+	margin-top: 20px;
+	.stats_text{
+		text-align: center;
+		padding-top: 100px;
+		margin: 0 auto;
+		h4{
+			font-size: 22px;
+			font-weight: bolder;
+			color: #fff;
+		}
+	}
+	.stats_numbers{
+		display: flex;
+		padding-top: 40px;
+		justify-content: space-around;
+		flex-flow: row wrap;
+		color: #fff;
+		font-size: 80px;
+		font-weight: bolder;
+		h3{
+			text-align: center;
+			font-size: 35px;
+			margin: 0;
+			padding-bottom: 100px;
+			font-weight: bolder;
+		}
+		p{
+			text-align: center;
+		}
+		.stats_numbers-item{
+			width: 320px;
 		}
 	}
 }

@@ -21,6 +21,7 @@
   <script src="./assets/js/main.js"></script>
   <title>Code Academy</title>
 </head>
+
 <body>
   <header>
     <div class="nav_container">
@@ -168,5 +169,71 @@
       </div>
     </div>
   </section>
+  <section id="stats">
+    <div class="my_container">
+      <div class="stats">
+        <div class="stats_text">
+          <h4>Code Academy hem arzuladığınız saheni elçatan edir,<br>
+            hem de geləcek karyera inkişafınız üçün lazımı bilik ve bacarıqları formalaşdırır.</h4>
+        </div>
+        <div class="stats_numbers">
+          <div class="stats_numbers-item">
+            <p id="telebe">3000</p>
+            <h3>telebe</h3>
+          </div>
+          <div class="stats_numbers-item">
+            <p id="karyera">427</p>
+            <h3>karyerasını<br>yaxşılaşdırıb</h3>
+          </div>
+          <div class="stats_numbers-item">
+            <p id="rehber">95</p>
+            <h3>rehber<br>vezifelerde işleyir</h3>
+          </div>
+          <div class="stats_numbers-item">
+            <p id="vezife">43</p>
+            <h3>vezifesi artıb</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    var speed = 1;
+    function incEltNbr(id) {
+      elt = document.getElementById(id);
+      endNbr = Number(document.getElementById(id).innerHTML);
+      incNbrRec(0, endNbr, elt);
+    }
+
+    function incNbrRec(i, endNbr, elt) {
+      if (i <= endNbr) {
+        elt.innerHTML = i;
+        setTimeout(function () {
+          incNbrRec(i + 1, endNbr, elt);
+        }, speed);
+      }
+    }
+    function incNbr() {
+      incEltNbr("telebe");
+    }
+
+    incEltNbr("telebe");
+    function incNbr() {
+      incEltNbr("karyera");
+    }
+
+    incEltNbr("karyera");
+    function incNbr() {
+      incEltNbr("rehber");
+    }
+
+    incEltNbr("rehber");
+    function incNbr() {
+      incEltNbr("vezife");
+    }
+
+    incEltNbr("vezife");
+  </script>
 </body>
+
 </html>
