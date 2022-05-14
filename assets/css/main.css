@@ -645,4 +645,156 @@ body {
     padding-left: 50px;
   }
 }
+
+.sual {
+  padding: 100px 50px;
+  background-color: #F4F5F8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.sual_summary {
+  width: 550px;
+}
+
+.sual_summary h2 {
+  font-size: 50px;
+  font-weight: lighter;
+}
+
+.sual_summary h3 {
+  font-size: 50px;
+  font-weight: bolder;
+  margin-top: -15px;
+  margin-left: 50px;
+}
+
+.sual_summary p {
+  font-size: 15px;
+  margin-top: 35px;
+  margin-left: 50px;
+}
+
+.sual_form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 103.5px 103.5px 103.5px 103.5px;
+      grid-template-columns: 103.5px 103.5px 103.5px 103.5px;
+  -ms-grid-rows: 59px 59px 59px 59px;
+      grid-template-rows: 59px 59px 59px 59px;
+      grid-template-areas: 'name name surname surname' 'prefix number number number' 'lesson lesson lesson lesson' 'btn btn btn btn';
+  grid-gap: 10px;
+}
+
+.sual_form input {
+  border: none;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.sual_form input:focus {
+  outline: 1px solid #a0a0a0;
+}
+
+.sual_form select {
+  border: none;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.sual_form select:focus {
+  outline: 1px solid #a0a0a0;
+}
+
+.sual_form .name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: name;
+}
+
+.sual_form .surname {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: surname;
+}
+
+.sual_form .prefix {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: prefix;
+}
+
+.sual_form .number {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: number;
+}
+
+.sual_form .lesson {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: lesson;
+}
+
+.sual_form button {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: btn;
+  background-color: #FCBA00;
+  border: none;
+  color: #fff;
+  font-size: 21px;
+  font-weight: bolder;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.sual_form button:hover {
+  background-color: #cf9800;
+}
+
+@media screen and (max-width: 1093px) {
+  .sual {
+    padding: 100px 0;
+  }
+  .sual .sual_summary {
+    margin-bottom: 20px;
+  }
+  .sual .sual_summary p {
+    display: none;
+  }
+  .sual .sual_form {
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+    -ms-grid-rows: 70px 70px 70px 70px;
+        grid-template-rows: 70px 70px 70px 70px;
+  }
+}
+
+@media screen and (max-width: 573px) {
+  .sual .sual_summary {
+    margin-bottom: 20px;
+  }
+  .sual .sual_summary p {
+    display: none;
+  }
+  .sual .sual_form {
+    -ms-grid-columns: 80px 80px 80px 80px;
+        grid-template-columns: 80px 80px 80px 80px;
+    -ms-grid-rows: 59px 59px 59px 59px;
+        grid-template-rows: 59px 59px 59px 59px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
